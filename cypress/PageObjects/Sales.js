@@ -7,6 +7,7 @@ class Sales{
     orderStatus = ":nth-child(5) > .col-md-8 > .k-widget > .k-multiselect-wrap";
     btnSearch   = "button.btn.btn-primary.btn-search";
     orderStatDrop= "#OrderStatusIds_listbox li";
+    totalOrders = "#orders-grid tbody tr";
         
 
      clickOnSales(){
@@ -19,6 +20,7 @@ class Sales{
         cy.wait(200); 
         cy.get(this.ordersMenu).eq(0).click();
     }
+
     openSearchBar(){
         cy.get(this.searchBar).click();
     }
@@ -30,6 +32,10 @@ class Sales{
 
     clickOnSearch(){
         cy.get(this.btnSearch).click();
+    }
+    
+    totalFoundOrders(data){
+        cy.get(this.totalOrders).should('have.length',data);
     }
 
     

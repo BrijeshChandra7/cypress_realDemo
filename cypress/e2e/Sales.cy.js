@@ -13,10 +13,13 @@ describe('Sales',()=>{
         let Nop = new Login();
         cy.log(data.baseUrl);
         cy.visit(data.baseUrl);
+
         cy.get('div.page-title').contains('Admin area demo');
-        
+        // Set Username
         Nop.setUserName(data.UserName);
+        // Set Password
         Nop.setPassword(data.Password);
+        // Login button
         Nop.clickLogin();
         cy.get(Nop.homeHeader).contains('Dashboard');
        })
@@ -40,9 +43,11 @@ describe('Sales',()=>{
       //Select Order status
       Nop.selectOrderStatus('Complete');
       cy.get(Nop.orderStatus).contains('Complete');
-      
+
       //Click on Search Button
       Nop.clickOnSearch();
+      // Verify total orders present for the criteria
+      Nop.totalFoundOrders(1);
     })
 
   /*  it('ClickOnOrdersMenu',()=>{
