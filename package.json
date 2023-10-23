@@ -1,0 +1,23 @@
+{
+  "name": "cypress_actual_work",
+  "version": "1.0.0",
+  "description": "cypress demo as live",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "e2e",
+    "test",
+    "cypress"
+  ],
+  "author": "Brijesh Chandra",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrijeshChandra7/cypress_realDemo.git"
+  }
+}

@@ -1,0 +1,6 @@
+{   "baseUrl"  : "https://admin-demo.nopcommerce.com/admin/",
+    "UserName" : "admin@yourstore.com",
+    "Password" : "admin",
+    "IncUserName" : "wsdadmin@yourstore.com",
+    "IncPassword" : "dwadmin"
+}
