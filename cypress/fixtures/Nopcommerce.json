@@ -2,5 +2,12 @@
     "UserName" : "admin@yourstore.com",
     "Password" : "admin",
     "IncUserName" : "wsdadmin@yourstore.com",
-    "IncPassword" : "dwadmin"
+    "IncPassword" : "dwadmin",
+    "NullHeader"        : "span#Email-error",
+    "IncOrStartDate": "03/13/2019",
+    "CorrectStartDate": "03/13/2017",
+    "OrderStatus" : "Pending",
+    "PaymentStatus" : "Pending",
+    "ShippingStatus" : "Shipping not required",
+    "BillingEmail"  : "james_pan@nopCommerce.com"
 }
