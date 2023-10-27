@@ -24,6 +24,9 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import './commands';
+import 'cypress-file-upload';
+require('@4tw/cypress-drag-drop');
+import '@4tw/cypress-drag-drop';
 
 //Adding Custom command to click on button
 Cypress.Commands.add('clickOnButton',(label)=>{
@@ -35,14 +38,14 @@ import Login from "../PageObjects/Login";
 
 
   Cypress.Commands.add('login', (username, password) => {
-    //cy.session([username, password], () => {
+    cy.session([username, password], () => {
       const baseUrl = Cypress.env("baseUrl");
       cy.visit(baseUrl);
       cy.get('#Email').clear().type(username);
       cy.get('#Password').clear().type(password);
       cy.get('button.login-button').click();
     })
-  //})
+  })
 
   Cypress.Commands.add('enterText',(selector, text) => {
     cy.get(selector).clear().type(text);

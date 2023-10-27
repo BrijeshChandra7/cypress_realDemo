@@ -27,6 +27,9 @@ describe("Sales", () => {
     cy.get("@Nopcommerce").then((data) => {
       cy.login(data.UserName, data.Password);
     });
+  
+    cy.visit(Cypress.env('baseUrl'));
+    
   });
 
   it("ClickOnSalesMenu", () => {
@@ -96,10 +99,10 @@ describe("Sales", () => {
     });
   });
 
-  /*  it('ClickOnOrdersMenu',()=>{
+   it('ClickOnOrdersMenu',()=>{
 
-        let Nop = new Sales();
-        Nop.clickOnOrders();
+    Sales.clickOnSales();
+    Sales.verifySalesMenu("Sales");
         
-      }) */
+      }) 
 });

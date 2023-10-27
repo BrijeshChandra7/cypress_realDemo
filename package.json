@@ -4,7 +4,11 @@
   "description": "cypress demo as live",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:spec": "cypress run --spec",
+    "cypress-dashboard-run": "npx cypress run --record --key=bddeb9d0-6789-4693-8526-7773e8b8fb74"
   },
   "keywords": [
     "e2e",
@@ -14,6 +18,9 @@
   "author": "Brijesh Chandra",
   "license": "ISC",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "cypress": "^13.3.2",
+    "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.6.1"
   },
   "repository": {
