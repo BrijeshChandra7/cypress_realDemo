@@ -4,25 +4,7 @@ import Login from "../PageObjects/Login";
 
 describe("Sales", () => {
   beforeEach(() => {
-    /* cy.fixture('Nopcommerce.json').as('Nopcommerce');
-       // const baseUrl = Cypress.env("baseUrl");
-     
-       cy.get('@Nopcommerce').then((data)=>{
-        let Nop = new Login();
-        cy.log(data.baseUrl);
-        cy.visit(data.baseUrl);
-
-        cy.get('div.page-title').contains('Admin area demo');
-
-        // Set Username
-        Nop.setUserName(data.UserName);
-
-        // Set Password
-        Nop.setPassword(data.Password);
-
-        // Login button
-        Nop.clickLogin();
-        cy.get(Nop.homeHeader).contains('Dashboard');   */
+    
     cy.fixture("Nopcommerce.json").as("Nopcommerce");
     cy.get("@Nopcommerce").then((data) => {
       cy.login(data.UserName, data.Password);
