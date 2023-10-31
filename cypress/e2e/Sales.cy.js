@@ -15,7 +15,7 @@ describe("Sales", () => {
   });
 
   it("ClickOnSalesMenu", () => {
-    //let Nop = new Sales();
+    
 
     // Click on Sales
     Sales.clickOnSales();
@@ -42,6 +42,7 @@ describe("Sales", () => {
     Sales.verifyTotalFoundOrders(1);
 
     cy.get("@Nopcommerce").then((data) => {
+  
       //enter start date in Order
       Sales.enterOrderStartDt(data.CorrectStartDate);
 
@@ -81,10 +82,4 @@ describe("Sales", () => {
     });
   });
 
-   it('ClickOnOrdersMenu',()=>{
-
-    Sales.clickOnSales();
-    Sales.verifySalesMenu("Sales");
-        
-      }) 
 });

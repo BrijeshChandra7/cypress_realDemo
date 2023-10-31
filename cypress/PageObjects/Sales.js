@@ -30,7 +30,7 @@ class Sales {
 
   clickOnSales() {
     cy.assertElementVisibility(this.salesMenu);
-    cy.clickElement(this.salesMenu); // click on Sales menu
+    cy.clickElement(this.salesMenu,); // click on Sales menu
     cy.wait(200);
     cy.clickElement(this.salesMenu); // Click on sales menu open full Sales
   }

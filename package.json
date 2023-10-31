@@ -17,14 +17,15 @@
   ],
   "author": "Brijesh Chandra",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrijeshChandra7/cypress_realDemo.git"
+  },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.5",
     "cypress": "^13.3.2",
     "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.6.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BrijeshChandra7/cypress_realDemo.git"
   }
+ 
 }

@@ -4,7 +4,6 @@ import Login from "../PageObjects/Login.js";
 describe("Login", () => {
   beforeEach(() => {
     cy.fixture("Nopcommerce.json").as("Nopcommerce");
-    // const baseUrl = Cypress.env("baseUrl");
     cy.get("@Nopcommerce").then((data) => {
       cy.log(data.baseUrl);
       cy.visit(data.baseUrl);
@@ -12,7 +11,6 @@ describe("Login", () => {
     });
   });
   it("Incorrect Username", () => {
-    // let Nop = new Login();
 
     cy.get("@Nopcommerce").then((data) => {
       Login.setUserName(data.IncUserName);
@@ -25,7 +23,6 @@ describe("Login", () => {
   });
 
   it("Incorrect Password", () => {
-    //let Nop = new Login();
 
     cy.get("@Nopcommerce").then((data) => {
       Login.setUserName(data.UserName);
@@ -38,7 +35,6 @@ describe("Login", () => {
   });
 
   it("Incorrect Username Incorrect Password", () => {
-    //  let Nop = new Login();
 
     cy.get("@Nopcommerce").then((data) => {
       Login.setUserName(data.IncUserName);
@@ -51,7 +47,6 @@ describe("Login", () => {
   });
 
   it("Correct Username Correct Password", () => {
-    // let Nop = new Login();
 
     cy.get("@Nopcommerce").then((data) => {
       Login.setUserName(data.UserName);
@@ -62,7 +57,6 @@ describe("Login", () => {
   });
 
   it("Null value and incorrect format ", () => {
-    // let Nop = new Login();
 
     cy.get("@Nopcommerce").then((data) => {
       Login.setUserName(" ");
